@@ -1,7 +1,73 @@
-#preloader {
+/*body {
     background: #000;
     height: 100vh;
     width: 100%;
-    position: fixed;
-    z-index: 100;
+    background-size: cover;
+    margin: 0;
+}*/
+
+h1 {
+    color: black;
+}
+
+img {
+    display: block;
+    width: 212px;
+    height: 212px;
+    padding: 1%;
+}
+
+.titlecontainer {
+    border: 4px solid green;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    border: 4px solid black;
+    margin: 1%;
+    padding:0;
+    width:300px;
+}
+
+.body {
+    border: 4px solid salmon;
+    width: 800px;
+    height: 635px;
+    overflow:
+}
+
+.module{
+    border: 4px solid black;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    
+}
+
+
+.imageitems {
+    border: 4px solid black;
+    transition: all 0.4s ease;
+}
+.imageitems:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.scoreboard {
+    border: 4px solid purple;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+}
+
+.gametext {
+    border: 4px solid pink;
+    font-size: 20px;
+    display: block;
 }
