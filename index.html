@@ -16,15 +16,18 @@
                         <h1 class="title">Rock Paper Scissors</h1>
                 </div>
                 <div class="module">
-                    <div class="imageitems" id="Rock">
+                    <button data-selection="Rock">
+                    <div class="imageitems" id="Rock" onclick="playerPlay(this.id);">
                         <img src="file:///home/jamboer/projrespo/rock-paper-scissors/images/rock.png" alt="Rock">
-                    </div>
-                    <div class="imageitems" id="Paper">
+                    </div></button>
+                    <button data-selection="Paper">
+                    <div class="imageitems" id="Paper" onclick="playerPlay(this.id);">
                         <img src="file:///home/jamboer/projrespo/rock-paper-scissors/images/paper.png" alt="Paper">
-                    </div>
-                    <div class="imageitems" id="Scissors">
-                        <img src="file:///home/jamboer/projrespo/rock-paper-scissors/images/scissors.png" alt="Scissors">
-                    </div>
+                    </div></button>
+                    <button data-selection="Scissors">
+                    <div class="imageitems" id="Scissors" onclick="playerPlay(this.id);">
+                        <img src="file:///home/jamboer/projrespo/rock-paper-scissors/images/scissors.png"  alt="Scissors">
+                    </div></button>
                 </div>
 
                 <div class="scoreboard">

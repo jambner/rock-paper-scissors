@@ -1,35 +1,20 @@
-/* 1. Make the scissors/rock/paper into an array
-2. make the function randomize */
-
-function computerPlay () {
-    const range = ["rock","paper","scissors"];
-    const randomselect = range[Math.floor(Math.random() * range.length)];
-    return randomselect; 
-}
-
-function playerPlay() {
-       let playerbutton1 = document.getElementById("Rock");
-       let playerbutton2 = document.getElementById("Paper");
-       let playerbutton3 = document.getElementById("Scissors");
-
-           if (playerbutton1) {
-                  playerbutton1.addEventListener("click", function(){
-                        playerSelection==="Rock";
-                  }, false);
-            } else if (playerbutton2) {
-                  playerbutton2.addEventListener("click", function(){
-                        playerSelection==="Paper";
-                  });
-            } else if (playerbutton3) {
-                  playerbutton3.addEventListener("click", function(){
-                        playerSelection==="Scissors";
-                  });
-            }
-}
+//function playerPlay grabs the ID of the div of which the user clicks. User Input
+function playerPlay(id) { 
+      const playerSelection = id;
+      console.log(playerSelection);
+      gameround(playerSelection);
+} 
 
 
-function gameround (playerSelection, ComputerSelection) {
-    if (playerSelection === ComputerSelection) {
+function gameround (playerSelection) {
+      const ComputerSelection = computerPlay(); //get computer's selection
+      const yourWinner = isWinner(playerSelection, ComputerSelection) //declare 
+      const computerWinner = isWinner(ComputerSelection, playerSelection)
+
+      addSelectionResult(ComputerSelection, computerWinner)
+      addSelectionResult(playerSelection, yourWinner)
+
+    /*if (playerSelection === ComputerSelection) {
         return 'It\'s a draw !';
       } else if (playerSelection === 'Rock') {
             return (ComputerSelection === 'Paper') ? 'Computer wins' : 'You win !';
@@ -38,15 +23,30 @@ function gameround (playerSelection, ComputerSelection) {
       } else if (playerSelection === 'Scissors') {
             return (ComputerSelection === 'Rock') ? 'Computer wins' : 'You win !';
       }
+      console.log()*/
 }
-/* ^ Function wont work with computerplay or playerselection?*/
-const playerSelection = playerPlay();
-const ComputerSelection = computerPlay();
-console.log(ComputerSelection);
-console.log(gameround(playerSelection, ComputerSelection));
+
+function addSelectionResult(playerSelection, winner) {
+      //write something to make the text increase by 1
+}
+
+function isWinner(){
+      //function of being winner chicken dinner
+}
+
+/* 1. Make the scissors/rock/paper into an array
+2. make the function randomize */
+function computerPlay () {
+      const range = ["Rock","Paper","Scissors"];
+      const randomselect = range[Math.floor(Math.random() * range.length)];
+      return randomselect; 
+  }
+  const ComputerSelection = computerPlay();
+  console.log(ComputerSelection);
 
 function game () {
     for (let i = 0; i < 5; i++) {
       gameround();
     }
 }
+
