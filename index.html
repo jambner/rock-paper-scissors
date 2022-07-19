@@ -32,26 +32,15 @@
 
                 <div class="scoreboard">
                     <div class="input">
-                        <h1 class="gametext" id="playerText">Player:</h1>
-                        <h1 class="gametext" id="computerText">Computer: </h1>
+                        <h1 class="gametext" id="playerText">Player:</h1><span class="result-score">0</span>
+                        <h1 class="gametext" id="computerText">Computer: </h1><span class="result-score">0</span>
                     </div>
                     <div class="result">
-                        <h1 class="gametext" id="resultText">Result:</h1>
+                        <h1 class="gametext" id="resultText">Result:</h1><span class="result-score">Draw!</span>
                     </div>
                 </div>
                 
             </div>
-
-
-
-            <!--preloader js script-->
-            <script> 
-                var loader = document.getElementById("preloader");
-                window.addEventListener("load", function(){
-                    loader.style.display = "none";
-                })
-            </script>
-
         </body>
 
     <footer>

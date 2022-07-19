@@ -1,11 +1,3 @@
-/*body {
-    background: #000;
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    margin: 0;
-}*/
-
 h1 {
     color: black;
 }
@@ -32,13 +24,15 @@ img {
 }
 
 .body {
-    border: 4px solid salmon;
+    border: 4px solid black;
     width: 800px;
     height: 635px;
 }
 
 .module{
-    border: 4px solid black;
+    border: 4px solid rgb(0, 0, 0);
+    border-left: 0;
+    border-right: 0;
     height: 400px;
     display: flex;
     align-items: center;
@@ -59,15 +53,42 @@ img {
 }
 
 .scoreboard {
-    border: 4px solid purple;
     height: 150px;
     display: flex;
     flex-direction: column;
     align-items: space-around;
 }
 
+.input {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .gametext {
-    border: 4px solid pink;
+
     font-size: 20px;
     display: block;
+    width: 12%;
 }
+
+#playerText{
+    width: 8%;
+
+}
+
+.result-score {
+    display: inline-block;
+    font-size: 40px;
+    display: block;
+
+}
+

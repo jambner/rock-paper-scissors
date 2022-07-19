@@ -14,7 +14,7 @@ function gameround (playerSelection) {
       addSelectionResult(ComputerSelection, computerWinner)
       addSelectionResult(playerSelection, yourWinner)
 
-    /*if (playerSelection === ComputerSelection) {
+    if (playerSelection === ComputerSelection) {
         return 'It\'s a draw !';
       } else if (playerSelection === 'Rock') {
             return (ComputerSelection === 'Paper') ? 'Computer wins' : 'You win !';
@@ -23,7 +23,7 @@ function gameround (playerSelection) {
       } else if (playerSelection === 'Scissors') {
             return (ComputerSelection === 'Rock') ? 'Computer wins' : 'You win !';
       }
-      console.log()*/
+      console.log()
 }
 
 function addSelectionResult(playerSelection, winner) {
@@ -43,10 +43,4 @@ function computerPlay () {
   }
   const ComputerSelection = computerPlay();
   console.log(ComputerSelection);
-
-function game () {
-    for (let i = 0; i < 5; i++) {
-      gameround();
-    }
-}
 
