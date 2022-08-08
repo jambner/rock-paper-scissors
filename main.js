@@ -1,3 +1,7 @@
+const computerScoreSpan = document.querySelector('[data-computer-score]');
+const playerScoreSpan = document.querySelector('[data-player-score]');
+const range = ["Rock","Paper","Scissors"];
+
 //function playerPlay grabs the ID of the div of which the user clicks. User Input
 function playerPlay(id) { 
       const playerSelection = id;
@@ -14,20 +18,17 @@ function gameround (playerSelection) {
       addSelectionResult(ComputerSelection, computerWinner)
       addSelectionResult(playerSelection, yourWinner)
 
-    if (playerSelection === ComputerSelection) {
-        return 'It\'s a draw !';
-      } else if (playerSelection === 'Rock') {
-            return (ComputerSelection === 'Paper') ? 'Computer wins' : 'You win !';
-      } else if (playerSelection === 'Paper') {
-            return (ComputerSelection === 'Scissors') ? 'Computer wins' : 'You win !';
-      } else if (playerSelection === 'Scissors') {
-            return (ComputerSelection === 'Rock') ? 'Computer wins' : 'You win !';
-      }
-      console.log()
+      if (yourWinner) incrementsScore(playerScoreSpan) //if player wins increase score by 1
+      if (computerWinner) incrementsScore(computerScoreSpan) //if computer wins increase score by 1
 }
 
+function incrementsScore(scoreSpan) {
+      scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1 //makes the text as an integer and go by 1
+}
+
+
 function addSelectionResult(playerSelection, winner) {
-      //write something to make the text increase by 1
+
 }
 
 function isWinner(){
@@ -37,10 +38,7 @@ function isWinner(){
 /* 1. Make the scissors/rock/paper into an array
 2. make the function randomize */
 function computerPlay () {
-      const range = ["Rock","Paper","Scissors"];
       const randomselect = range[Math.floor(Math.random() * range.length)];
       return randomselect; 
   }
-  const ComputerSelection = computerPlay();
-  console.log(ComputerSelection);
 
